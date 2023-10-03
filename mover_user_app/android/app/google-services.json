@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "591399289609",
+    "project_id": "mover-35417",
+    "storage_bucket": "mover-35417.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:591399289609:android:3969342651cedb24c189d8",
+        "android_client_info": {
+          "package_name": "com.mohinur.mover_user_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEi8_ZFB5j6Peag6zXurqw7Yn2ufiTrSY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

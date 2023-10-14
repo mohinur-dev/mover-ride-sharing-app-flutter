@@ -56,9 +56,7 @@ class MapProvider with ChangeNotifier {
     setCustomPin();
 
     if (kDebugMode) {
-      print('=====///=============///=====');
       print('Map provider loaded');
-      print('///==========///==========///');
     }
   }
 
@@ -115,9 +113,7 @@ class MapProvider with ChangeNotifier {
           );
         } catch (error) {
           if (kDebugMode) {
-            print('=====///=============///=====');
             print('Unable to get device location');
-            print('///==========///==========///');
           }
         }
       }

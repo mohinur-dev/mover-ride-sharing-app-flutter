@@ -141,7 +141,7 @@ class _BottomDraggableSheetState extends State<BottomDraggableSheet> {
               ),
               Chip(
                 label: Text(
-                  'Cost: \$${trip.cost!.toStringAsFixed(2)}',
+                  'Cost: ৳${trip.cost!.toStringAsFixed(2)}',
                   style: const TextStyle(color: Colors.white),
                 ),
                 backgroundColor: Colors.black,

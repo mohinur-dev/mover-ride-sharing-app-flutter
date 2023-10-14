@@ -10,10 +10,10 @@ class CollectCash extends StatelessWidget {
   const CollectCash({Key? key}) : super(key: key);
 
   void _collectCash(
-      BuildContext context,
-      Trip ongoingTrip,
-      MapProvider mapProvider,
-      ) {
+    BuildContext context,
+    Trip ongoingTrip,
+    MapProvider mapProvider,
+  ) {
     final DatabaseService dbService = DatabaseService();
     ongoingTrip.tripCompleted = true;
     dbService.updateTrip(ongoingTrip);
@@ -59,7 +59,7 @@ class CollectCash extends StatelessWidget {
               if (ongoingTrip.cost != null)
                 Center(
                   child: Text(
-                    '\$${ongoingTrip.cost!.toStringAsFixed(2)}',
+                    '৳${ongoingTrip.cost!.toStringAsFixed(2)}',
                     style: const TextStyle(
                       fontSize: 25,
                       fontWeight: FontWeight.bold,

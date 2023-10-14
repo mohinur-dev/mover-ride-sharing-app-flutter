@@ -47,7 +47,7 @@ class CashEarnedScreen extends StatelessWidget {
                   const SizedBox(height: 15),
                   Chip(
                     label: Text(
-                      '\$${totalEarned.toStringAsFixed(2)}', //৳
+                      '৳${totalEarned.toStringAsFixed(2)}',
                       style: const TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,

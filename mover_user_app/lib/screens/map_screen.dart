@@ -33,19 +33,19 @@ class MapScreen extends StatelessWidget {
               children: [
                 mapProvider.cameraPos != null
                     ? GoogleMap(
-                  myLocationEnabled: true,
-                  myLocationButtonEnabled: true,
-                  onMapCreated: mapProvider.onMapCreated,
-                  initialCameraPosition: mapProvider.cameraPos!,
-                  compassEnabled: true,
-                  onTap: mapProvider.onTap,
-                  markers: mapProvider.markers!,
-                  polylines: mapProvider.polylines!,
-                  padding: const EdgeInsets.only(bottom: 90),
-                )
+                        myLocationEnabled: true,
+                        myLocationButtonEnabled: true,
+                        onMapCreated: mapProvider.onMapCreated,
+                        initialCameraPosition: mapProvider.cameraPos!,
+                        compassEnabled: true,
+                        onTap: mapProvider.onTap,
+                        markers: mapProvider.markers!,
+                        polylines: mapProvider.polylines!,
+                        padding: const EdgeInsets.only(bottom: 90),
+                      )
                     : const Center(
-                  child: CircularProgressIndicator(),
-                ),
+                        child: CircularProgressIndicator(),
+                      ),
                 ConfirmPickup(mapProvider: mapProvider),
                 SearchDriver(mapProvider: mapProvider),
                 DriverArriving(mapProvider: mapProvider),

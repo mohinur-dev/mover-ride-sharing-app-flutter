@@ -1,6 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:mover_user_app/screens/onboarding_sceen.dart';
+import 'package:mover_user_app/screens/onboarding_screen.dart';
 import 'package:mover_user_app/screens/login_signup_screen.dart';
 import 'package:provider/provider.dart';
 

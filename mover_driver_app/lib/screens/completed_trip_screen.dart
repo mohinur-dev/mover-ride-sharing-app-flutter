@@ -69,7 +69,7 @@ class CompletedTripsScreen extends StatelessWidget {
           bottom: 3,
           right: 10,
           child: Chip(
-            label: Text('\$${trip.cost!.toStringAsFixed(2)}'), //৳
+            label: Text('৳${trip.cost!.toStringAsFixed(2)}'),
             backgroundColor: Colors.black,
             labelStyle: const TextStyle(
               fontWeight: FontWeight.bold,

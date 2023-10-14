@@ -35,19 +35,19 @@ class MapScreen extends StatelessWidget {
               children: [
                 mapProvider.cameraPos != null
                     ? GoogleMap(
-                  myLocationEnabled: true,
-                  myLocationButtonEnabled: true,
-                  onMapCreated: mapProvider.onMapCreated,
-                  initialCameraPosition: mapProvider.cameraPos!,
-                  compassEnabled: true,
-                  onCameraMove: mapProvider.onCameraMove,
-                  markers: mapProvider.markers!,
-                  polylines: mapProvider.polylines!,
-                  padding: const EdgeInsets.only(bottom: 120),
-                )
+                        myLocationEnabled: true,
+                        myLocationButtonEnabled: true,
+                        onMapCreated: mapProvider.onMapCreated,
+                        initialCameraPosition: mapProvider.cameraPos!,
+                        compassEnabled: true,
+                        onCameraMove: mapProvider.onCameraMove,
+                        markers: mapProvider.markers!,
+                        polylines: mapProvider.polylines!,
+                        padding: const EdgeInsets.only(bottom: 120),
+                      )
                     : const Center(
-                  child: CircularProgressIndicator(),
-                ),
+                        child: CircularProgressIndicator(),
+                      ),
                 mapProvider.mapAction == MapAction.browse
                     ? const BottomDraggableSheet()
                     : Container(),

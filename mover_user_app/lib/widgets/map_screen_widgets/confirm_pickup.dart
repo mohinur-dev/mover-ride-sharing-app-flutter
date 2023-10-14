@@ -79,7 +79,7 @@ class ConfirmPickup extends StatelessWidget {
                     ),
                   if (mapProvider!.cost != null)
                     Text(
-                      'Trip will cost: \$${mapProvider!.cost!.toStringAsFixed(2)}',
+                      'Trip will cost: ৳${mapProvider!.cost!.toStringAsFixed(2)}',
                     ),
                   const SizedBox(height: 5),
                 ],

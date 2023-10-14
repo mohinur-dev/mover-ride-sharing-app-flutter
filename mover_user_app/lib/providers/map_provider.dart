@@ -80,9 +80,7 @@ class MapProvider with ChangeNotifier {
     setCustomPin();
 
     if (kDebugMode) {
-      print('=====///=============///=====');
       print('Map provider loaded');
-      print('///==========///==========///');
     }
   }
 
@@ -145,9 +143,7 @@ class MapProvider with ChangeNotifier {
           listenToPositionStream();
         } catch (error) {
           if (kDebugMode) {
-            print('=====///=============///=====');
             print('Unable to get device location');
-            print('///==========///==========///');
           }
         }
       }
@@ -255,19 +251,19 @@ class MapProvider with ChangeNotifier {
       draggable: isDraggable,
       onDrag: (v) {
         if (kDebugMode) {
-          print('========Drag====');
+          print('Drag');
           print(v.toString());
         }
       },
       onDragStart: (v) {
         if (kDebugMode) {
-          print('========Drag Start====');
+          print('Drag Start');
           print(v.toString());
         }
       },
       onDragEnd: (LatLng newPos) async {
         if (kDebugMode) {
-          print('========Drag end====');
+          print('Drag end');
           print(newPos.toString());
         }
         await updateMarkerPos(newPos);
@@ -382,14 +378,15 @@ class MapProvider with ChangeNotifier {
     _distance = distance / 1000;
   }
 
+  //calculation of cost
   void calculateCost() {
-    _cost = _distance! * 0.75;
+    _cost = (_distance! <= 1) ? 100 : 100 + (_distance! - 1) * 20;
   }
 
   void clearRoutes([bool shouldClearDistanceCost = true]) {
     if (kDebugMode) {
       print(
-        '======== Clear routes (markers, poly-lines, destination data, etc....) ========',
+        'Clear routes (markers, poly-lines, destination data, etc....) ',
       );
     }
 
@@ -558,14 +555,12 @@ class MapProvider with ChangeNotifier {
 
   void startListeningToTrip() {
     if (kDebugMode) {
-      print('======== Start listening to trip stream ========');
+      print('Start listening to trip stream');
     }
 
     _tripStream = _dbService.getTrip$(_ongoingTrip!).listen((Trip trip) {
       if (kDebugMode) {
-        print('========///========///========');
         print(trip.toMap());
-        print('====///====///====///====///====');
       }
       setOngoingTrip(trip);
 
@@ -586,7 +581,7 @@ class MapProvider with ChangeNotifier {
   void stopListeningToTrip() {
     if (_tripStream != null) {
       if (kDebugMode) {
-        print('======== Stop listening to trip stream ========');
+        print('Stop listening to trip stream');
       }
 
       _tripStream!.cancel();
@@ -601,7 +596,7 @@ class MapProvider with ChangeNotifier {
     stopAutoCancelTimer();
 
     if (kDebugMode) {
-      print('======= Set auto cancel trip timer to 100 seconds =======');
+      print('Set auto cancel trip timer to 100 seconds');
     }
 
     _tripCancelTimer = Timer(
@@ -617,7 +612,7 @@ class MapProvider with ChangeNotifier {
   void stopAutoCancelTimer() {
     if (_tripCancelTimer != null) {
       if (kDebugMode) {
-        print('======= Auto cancel timer stopped =======');
+        print('Auto cancel timer stopped');
       }
 
       _tripCancelTimer!.cancel();

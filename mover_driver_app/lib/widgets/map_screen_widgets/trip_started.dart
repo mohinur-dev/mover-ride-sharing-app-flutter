@@ -80,7 +80,7 @@ class TripStarted extends StatelessWidget {
                   ),
                   if (ongoingTrip.cost != null)
                     Chip(
-                      label: Text('\$${ongoingTrip.cost!.toStringAsFixed(2)}'),
+                      label: Text('৳${ongoingTrip.cost!.toStringAsFixed(2)}'),
                       backgroundColor: Colors.black,
                       labelStyle: const TextStyle(color: Colors.white),
                     ),

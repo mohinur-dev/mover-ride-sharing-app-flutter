@@ -52,7 +52,7 @@ class ReachedDestination extends StatelessWidget {
               if (mapProvider.cost != null)
                 Center(
                   child: Chip(
-                    label: Text('\$${mapProvider.cost!.toStringAsFixed(2)}'),
+                    label: Text('৳${mapProvider.cost!.toStringAsFixed(2)}'),
                   ),
                 ),
             ],

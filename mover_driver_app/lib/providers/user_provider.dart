@@ -13,7 +13,7 @@ class UserProvider with ChangeNotifier {
   UserProvider.initialize() {
     if (FirebaseAuth.instance.currentUser != null) {
       _dbService.getUser(FirebaseAuth.instance.currentUser!.uid).then(
-            (user.User user) {
+        (user.User user) {
           _loggedUser = user;
           notifyListeners();
         },
